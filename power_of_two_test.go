@@ -7,8 +7,8 @@ import (
 
 var x int64
 
-// Benchmark_PowerOfTwo-16    	173414430	         7.488 ns/op	       0 B/op	       0 allocs/op
-func Benchmark_PowerOfTwoBitwise(b *testing.B) {
+// Benchmark_PowerOfTwo_BitwiseFor-16    	173414430	         7.488 ns/op	       0 B/op	       0 allocs/op
+func Benchmark_PowerOfTwo_BitwiseFor(b *testing.B) {
 	b.ResetTimer()
 	b.ReportAllocs()
 	for i := 0; i < b.N; i++ {
@@ -16,8 +16,8 @@ func Benchmark_PowerOfTwoBitwise(b *testing.B) {
 	}
 }
 
-// Benchmark_PowerOfTwoBruteForce-16    	134810326	         8.502 ns/op	       0 B/op	       0 allocs/op
-func Benchmark_PowerOfTwoBruteForce(b *testing.B) {
+// Benchmark_PowerOfTwo_BruteForce-16    	134810326	         8.502 ns/op	       0 B/op	       0 allocs/op
+func Benchmark_PowerOfTwo_BruteForce(b *testing.B) {
 	b.ResetTimer()
 	b.ReportAllocs()
 	for i := 0; i < b.N; i++ {
