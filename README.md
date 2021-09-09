@@ -14,7 +14,7 @@ I assumed that the bitwise magic would be way faster than the bruteforce solutio
 
 Since this would theoretically do extra shift attempts when we don't need them, I wanted to try out adding a for loop so we could cut off the number of shifts, but apparently the overhead of a for loop adds too much of a performance hit.
 
-On the other hand, from what I can tell, the difference between the Bitwise version with the For loop and the Bruteforce is pretty minimal, (approximately 1ns) which was a pretty surprising revelation! I guess that when bruteforcing with raw math and a for loop vs. bitwise operations and a for loop, the real performance penalty is the for loop itself.
+On the other hand, from what I can tell, the difference between the Bitwise version with the For loop and the Bruteforce is pretty minimal, (approximately 1ns) which was a pretty surprising revelation! I guess that when bruteforcing with raw math and a for loop vs. bitwise operations and a for loop, the real performance penalty is the for loop itself. From what I could tell, the bitwise operations and math operations have essentially the same overhead (1ns per op), so the for loop adds the major hit.
 
 ```
 goos: darwin
