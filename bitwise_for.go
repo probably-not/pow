@@ -1,6 +1,6 @@
 package pow
 
-func NextPowerOfTwo(target int64) int64 {
+func NextPowerOfTwoFor(target int64) int64 {
 	target--
 
 	for i := 1; target>>i != 0; i *= 2 {
@@ -11,7 +11,7 @@ func NextPowerOfTwo(target int64) int64 {
 	return target
 }
 
-func ClosestPowerOfTwoBitwise(input int64) int64 {
+func ClosestPowerOfTwoBitwiseFor(input int64) int64 {
 	// We can't calculate for negative numbers
 	if input < 0 {
 		panic("input cannot be negative")
@@ -27,7 +27,7 @@ func ClosestPowerOfTwoBitwise(input int64) int64 {
 		return 2
 	}
 
-	nextPowerOfTwo := NextPowerOfTwo(input)
+	nextPowerOfTwo := NextPowerOfTwoFor(input)
 
 	if prev := nextPowerOfTwo / 2; (input - prev) < (nextPowerOfTwo - input) {
 		return prev
