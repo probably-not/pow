@@ -29,9 +29,9 @@ func Test_PowerOfTwo(t *testing.T) {
 	for i := 0; i < 1000; i++ {
 		input := rand.Intn(1000000000)
 		bruteForce := ClosestPowerOfTwoBruteForce(int64(input))
-		bitwise := ClosestPowerOfTwoBitwiseFor(int64(input))
-		if bruteForce != bitwise {
-			t.Errorf("bruteforce and bitwise are not equal for input %d. bruteforce got=%d, bitwise got=%d.", input, bruteForce, bitwise)
+		bitwisefor := ClosestPowerOfTwoBitwiseFor(int64(input))
+		if bruteForce != bitwisefor {
+			t.Errorf("bruteforce and bitwisefor are not equal for input %d. bruteforce got=%d, bitwisefor got=%d.", input, bruteForce, bitwisefor)
 		}
 	}
 }
