@@ -16,7 +16,7 @@ func ClosestPowerOfTwoBruteForce(input int64) int64 {
 		return 2
 	}
 
-	prev := int64(1)
+	prev := int64(2)
 	for {
 		nextPowerOfTwo := prev * 2
 
